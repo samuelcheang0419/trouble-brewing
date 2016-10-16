@@ -28,6 +28,7 @@ def plot(species):
     if species not in coffee_df['scientificname'].unique():
         return 'Species does not exist'
     key = coffee_df[coffee_df['scientificname'] == species].iloc[0]['specieskey']
+    coffee_df = coffee_df[coffee_df['specieskey'] == key]
     recommender_df = pd.read_csv('processed-data/recommender_df.csv', index_col = 0)
     total = recommender_df.shape[0]
     recommender_df = recommender_df[recommender_df['specieskey'] == key]
@@ -54,7 +55,8 @@ def plot(species):
     m.save('recommendations/current/{}_current.html'.format(species))
 
 if __name__ == '__main__':
-    species = ['Coffea liberica Hiern',
+    species = ['Coffea arabica L.',
+ 'Coffea liberica Hiern',
  'Coffea canephora Pierre ex A.Froehner',
  'Psilanthus mannii Hook.f.',
  'Coffea mayombensis A.Chev.',
@@ -209,9 +211,5 @@ if __name__ == '__main__':
  'Coffea uniflora K.Schum.',
  'Coffea liberica f. bwambensis Bridson',
  'Coffea benghalensis B.Heyne ex Schult.']
-    # for s in species:
-    #     plot(s)
-    # plot('Coffea stenophylla G.Don')
-    # plot('Coffea dewevrei De Wild. & T.Durand')
-    # plot('Coffea benghalensis B.Heyne ex Schult.')
-    plot('Coffea arabica L.')
+    for s in species:
+        plot(s)
