@@ -4,6 +4,7 @@ References:
 [2] http://www.nytimes.com/2016/09/23/science/climate-change-threatens-worlds-coffee-supply-report-says.html
 [3] http://www.ico.org/monthly_coffee_trade_stats.asp
 [4] http://link.springer.com/article/10.1007/s10584-014-1306-x
-[5] http://www.esri.com/industries/climate-weather-atmosphere/climate-change 
+[5] http://www.esri.com/industries/climate-weather-atmosphere/climate-change
 [6] http://www.gbif.org/occurrence/search?taxon_key=2895315&HAS_COORDINATE=true&HAS_GEOSPATIAL_ISSUE=false&YEAR.offset=0&offset=20#
 [7] http://dx.doi.org/10.1371/journal.pone.0088463
+[8] http://www.climateinstitute.org.au/verve/_resources/TCI_A_Brewing_Storm_FINAL_28082016_web.pdf
