@@ -2,8 +2,7 @@
 
 # Trouble Brewing: Predicting the Next Generation of Optimal Coffee-growing Regions Due To Environmental Changes
 
-## Samuel Cheang (Cohort 16)
-## 9/27/2016
+![alt text](https://github.com/samuelcheang0419/trouble-brewing/blob/master/Coffea-brassii-screenshot.png)
 
 ## Motivation behind project:
 Coffee quality and production is highly susceptible to various environmental factors, including temperature, rainfall, elevation, and soil condition etc. Demand for coffee is continually growing, with the International Coffee Organization (ICO) estimating an increase by approximately 25% from 2015 to 2020 [1]. This is met with increased unpredictability and decreased quantity of supply by most coffee-producing countries (e.g. Colombia, Brazil etc.) due to shifts in environmental patterns.
