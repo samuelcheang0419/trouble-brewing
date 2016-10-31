@@ -60,8 +60,12 @@ Run 'similarity.py.' It takes as input the combined climate data (baseline and p
 
 Run 'final_final.py.' It takes as input the similarity matrix from above and, for each coffee species, creates a csv file of recommendations (in the 'prediction-data' folder).
 
+For my findings and discussion on adaptation strategies for countries, please check my [presentation slides](https://github.com/samuelcheang0419/trouble-brewing/blob/master/16-Sam.pdf) or [talk](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation.m4v).
+
 ### Visualization
-Run 'climate-plot.py' and 'recommender-plot.py.' IT takes as input the recommendation files from above and, for each coffee species, produces an interactive map of current coffee growing locations and other recommended locations (in the 'recommendations' folder).
+Run 'climate-plot.py' and 'recommender-plot.py.' It takes as input the recommendation files from above and, for each coffee species, produces an interactive map of current coffee growing locations and other recommended locations (in the 'recommendations' folder).
+
+For examples of what the maps look like, please check the map above in this readme or my [presentation slides](https://github.com/samuelcheang0419/trouble-brewing/blob/master/16-Sam.pdf) or [talk](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation.m4v). 
 
 ## Acknowledgements
 - CCAFS for climate data
