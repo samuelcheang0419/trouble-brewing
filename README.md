@@ -13,9 +13,9 @@ Legend
 - Light yellow: recommended locations to grow Coffea brassii
 
 To check out a presentation I gave on this project:
-[Presentation slides](https://github.com/samuelcheang0419/trouble-brewing/blob/master/16-Sam.pdf)
-[Talk](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation.m4v)
-[Response to questions](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation-questions.rtf)
+- [Presentation slides](https://github.com/samuelcheang0419/trouble-brewing/blob/master/16-Sam.pdf)
+- [Talk](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation.m4v)
+- [Response to questions](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation-questions.rtf)
 
 ## Motivation
 Demand for coffee is continually growing [1]. This is met with increased unpredictability and decreased quantity of supply by most coffee-producing countries (e.g. Colombia, Brazil etc.) due to shifts in environmental patterns [7].
