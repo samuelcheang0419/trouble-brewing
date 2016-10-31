@@ -25,7 +25,7 @@ As coffee plantations have a lifespan of about thirty years (some up to fifty ye
 The methodologies used in this project can be applied to any organism affected by environmental changes.
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine (or more likely an ec2 instance)
+These instructions will get you a copy of the project up and running on your local machine (or more likely an AWS EC2 instance)
 
 ### Prerequisites
 The coffee biodiversity data can be found [here](http://www.gbif.org/occurrence/search?taxon_key=2895315&HAS_COORDINATE=true&HAS_GEOSPATIAL_ISSUE=false&YEAR.offset=0&offset=20#). Search for:
@@ -44,7 +44,7 @@ The baseline and projected climate data can be found [here](http://ccafs-climate
 - Variable = Bioclimatics
 - Resolution = 10 minutes
 
-Save the resulting asc files into a folder 'climate-data'
+Save the resulting uncompressed asc files into a folder 'climate-data.' It may be a good idea to move everything to an AWS EC2 instance.
 
 ### Preprocessing
 Fork this repository.
