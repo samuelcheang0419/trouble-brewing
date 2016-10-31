@@ -3,7 +3,9 @@
 # Trouble Brewing: Predicting the Next Generation of Optimal Coffee-growing Regions Due To Environmental Changes
 
 [![alt text](https://github.com/samuelcheang0419/trouble-brewing/blob/master/Coffea-brassii-screenshot.png)](https://cdn.rawgit.com/samuelcheang0419/trouble-brewing/master/Coffea%20brassii%20(J.-F.Leroy)%20A.P.Davis_current.html)
-Recommendation map for Coffea brassii ***(click the map to see an interactive version of it)***, Australia's only native coffee species and [a subject of discussion among the coffee industry in the past few years](http://www.news.com.au/national/scientists-perked-up-by-aussie-coffee-bean-coffea-brassii-found-at-cape-york/story-e6frfkvr-1226044210772).
+***(click the map to see an interactive version of it)***
+
+Recommendation map for Coffea brassii, Australia's only native coffee species and [a subject of discussion among the coffee industry in the past few years](http://www.news.com.au/national/scientists-perked-up-by-aussie-coffee-bean-coffea-brassii-found-at-cape-york/story-e6frfkvr-1226044210772).
 
 Legend
 - Green: current locations growing Coffea brassii
