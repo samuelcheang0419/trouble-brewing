@@ -20,7 +20,7 @@ To check out a presentation I gave on this project:
 ## Motivation
 Demand for coffee is continually growing [1]. This is met with increased unpredictability and decreased quantity of supply by most coffee-producing countries (e.g. Colombia, Brazil etc.) due to shifts in environmental patterns [7].
 
-As coffee plantations have a lifespan of about thirty years (some up to fifty years), it is imperative for countries that rely heavily on coffee exports to plan ahead and identify optimal locations for coffee growth. [4]
+As coffee plantations have a lifespan of about thirty years (some up to fifty years), it is imperative for countries that rely heavily on coffee exports to plan ahead and identify optimal locations for coffee growth [4].
 
 The methodologies used in this project can be applied to any organism affected by environmental changes.
 
@@ -65,7 +65,7 @@ For my findings and discussion on adaptation strategies for countries, please ch
 ### Visualization
 Run 'climate-plot.py' and 'recommender-plot.py.' It takes as input the recommendation files from above and, for each coffee species, produces an interactive map of current coffee growing locations and other recommended locations (in the 'recommendations' folder).
 
-For examples of what the maps look like, please check the map above in this readme or my [presentation slides](https://github.com/samuelcheang0419/trouble-brewing/blob/master/16-Sam.pdf) or [talk](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation.m4v). 
+For examples of what the maps look like, please check the map above in this readme or my [presentation slides](https://github.com/samuelcheang0419/trouble-brewing/blob/master/16-Sam.pdf) or [talk](https://github.com/samuelcheang0419/trouble-brewing/blob/master/presentation.m4v).
 
 ## Acknowledgements
 - CCAFS for climate data
