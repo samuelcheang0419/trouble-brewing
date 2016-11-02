@@ -1,0 +1,3169 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_44ada2967cd740d8bec0d7560c278611 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.2/leaflet-dvf.markers.min.js"></script>
+        
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_44ada2967cd740d8bec0d7560c278611" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_44ada2967cd740d8bec0d7560c278611 = L.map('map_44ada2967cd740d8bec0d7560c278611', {
+                                           center:[6,-27],
+                                           zoom: 3,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_d7268b287d8f4996a1be67fb8eed146d = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_44ada2967cd740d8bec0d7560c278611);
+
+        
+        
+            
+            var tile_layer_340012ad74254513802b3cd0c36b3b5f = L.tileLayer(
+                'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: '(c) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (c) <a href="http://cartodb.com/attributions">CartoDB</a>, CartoDB <a href ="http://cartodb.com/attributions">attributions</a>',
+                    detectRetina: false
+                    }
+                ).addTo(map_44ada2967cd740d8bec0d7560c278611);
+
+        
+        
+            
+            var regular_polygon_marker_f7f477405132463a84ccd138a8b6399e = new L.RegularPolygonMarker(
+                new L.LatLng(-24.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3b6b69db58a64a2dbc2f56dd49eab28d = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_db3e58fe40be47d391c775daebff096c = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_0f541d9f181b45b1930b5884258fd6d1 = new L.RegularPolygonMarker(
+                new L.LatLng(-21.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c056dd210b92491dad36f7113ecaf660 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b6556bd4cecf4fe485163edaf5712218 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_1847af80b15c423db2858e6e9ecc376d = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c024fb4f45ac404b8bda550c872e02b5 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ed4701aabe9f48afb42b7a943b1ae99e = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_4a7efd2c47b844c68ada0644ffd44f9c = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_bdc9112023a349728e7964f87af6e347 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_8015800055b3448e87ea4e9fdbd96585 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ed8401504880437bab8f9b1c77c75a0d = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_08880a1658c44dea839633fcfe121940 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_db9314766c4e4fc48e821a898e716943 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3262bbbf09dc41a7910ee62a9e876db1 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_e14ef70871ac40f2bee6eac0b207aba2 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b25e9fb34bb24002a7d08ec9f0d0f0af = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,46.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_6a35337141db4828a8404761bfb9232e = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_0fd020a7bb8b4c1fbfc1d2610ddb72d3 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_6b35b7fc0f594b5484db841ed0f8f2c9 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_672453345fde40b0b3c7e04ed4270aac = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b0b1540b42a045e997737881359e0ffe = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_33685247a34143b2a20be88492f02529 = new L.RegularPolygonMarker(
+                new L.LatLng(-22.0,43.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a3561a78045c4b96a7e0fff7226677e2 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_7e4c6d967c3a4d5a8084a551a1b7ece9 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_f612196f14ae460c8893a9db2d141035 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_1e557594045f4dafab6df6d4ebf75c54 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ad7e4faf406747f6baf6f6e8be3dae37 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,46.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c20ae08698164b37b54b91769bff2a03 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a2e1f9af86264175bf4a4226c9699a51 = new L.RegularPolygonMarker(
+                new L.LatLng(-22.0,43.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_80dd97cbef3646889b1c1184ce22db93 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d77912461997409c9abe28b268449a73 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a41810a80c0940d896c23b66cfd0a06d = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_815204e41e054d3fbf844a933ffcfa45 = new L.RegularPolygonMarker(
+                new L.LatLng(-18.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ef83043cf62749938835aa160ae42f4f = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_7d8ceb1f25674412a7c33dd2dd79a2c9 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_422e7a44e0ab45639d6d84096446c6a7 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_845a63d86ac743878d70e241c5f9b2f0 = new L.RegularPolygonMarker(
+                new L.LatLng(-18.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_1dfb6c9e6e614317a2493aa7d27ef1af = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_282da22c5d634a9d9a075bd739bd478f = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_11444bacdbac4c3e9f650345a67174a1 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d9f9b79bee244aac9066e1bd08f344ca = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_1c8f6bb5348b445e979631fc6cb8c8a1 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_efb81132cfba44c59a0453f84143be6a = new L.RegularPolygonMarker(
+                new L.LatLng(-22.0,43.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#26c10b',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#26c10b',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_34d947dde8b340ad8efe73790caf61f7 = new L.RegularPolygonMarker(
+                new L.LatLng(-23.0,-47.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_6150b7610efa4f2396584c0edb8d712b = new L.RegularPolygonMarker(
+                new L.LatLng(5.0,-76.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_2e77cc5ae5a4475e8ae44fd6f19f8f17 = new L.RegularPolygonMarker(
+                new L.LatLng(0.0,18.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_dbe86642a2d443a3ac853b2433e254f7 = new L.RegularPolygonMarker(
+                new L.LatLng(5.0,10.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_64684835c3cb41668b3b262b5cd8760d = new L.RegularPolygonMarker(
+                new L.LatLng(-19.0,48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_8a298102519d40198ecbd242c3e052ec = new L.RegularPolygonMarker(
+                new L.LatLng(3.0,11.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c49d06460c0144d8bb47f08ddaec76ee = new L.RegularPolygonMarker(
+                new L.LatLng(4.0,9.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3f6a05efa1e740989d1508c31453a1d0 = new L.RegularPolygonMarker(
+                new L.LatLng(-2.0,10.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_139bf9691fea4da095dcbffb3e2fde3b = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_93b16306e8bf41798cb9c76a0e8b7f1c = new L.RegularPolygonMarker(
+                new L.LatLng(-5.0,39.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b6507cd322e84b8da49a7bfbb73f5741 = new L.RegularPolygonMarker(
+                new L.LatLng(1.0,24.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_cbc7a41b720c4354a7fc9232832cdf0d = new L.RegularPolygonMarker(
+                new L.LatLng(-14.0,143.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_11bba4efeff04fdd85f735d0328186c8 = new L.RegularPolygonMarker(
+                new L.LatLng(-9.0,36.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_95f1d701ba90448e822618ded0597217 = new L.RegularPolygonMarker(
+                new L.LatLng(-13.0,49.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_67cd479c63ec4813b8cae3ac431853f3 = new L.RegularPolygonMarker(
+                new L.LatLng(-21.0,47.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_16741e48d341493c90575ca35e144ef3 = new L.RegularPolygonMarker(
+                new L.LatLng(3.0,10.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_57e791ab0a5a483783ebde497cdb9ede = new L.RegularPolygonMarker(
+                new L.LatLng(-8.0,39.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_746ceef9765d4717a8f6dcbcd87d8838 = new L.RegularPolygonMarker(
+                new L.LatLng(-7.0,39.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_7b10e5780cd543f3beff103743e23c40 = new L.RegularPolygonMarker(
+                new L.LatLng(-4.0,39.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_eede93a754774650bc6080a1967a5d49 = new L.RegularPolygonMarker(
+                new L.LatLng(25.0,122.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_bdc01ed47d164f78a63eee34a1b6a5f9 = new L.RegularPolygonMarker(
+                new L.LatLng(10.0,-84.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b51cd8911cef408280266260cd3d0432 = new L.RegularPolygonMarker(
+                new L.LatLng(17.0,-92.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_f9bf757aad2c457b8c50597f87b184bc = new L.RegularPolygonMarker(
+                new L.LatLng(-4.0,40.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d5f2672a2ffe43e89c849671349bb321 = new L.RegularPolygonMarker(
+                new L.LatLng(-21.0,48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b3f885120e384b27b5eef579d7d4bf57 = new L.RegularPolygonMarker(
+                new L.LatLng(24.0,121.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_bcc89099ed8f485f8a951fcac82f4752 = new L.RegularPolygonMarker(
+                new L.LatLng(20.0,-97.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_825748683540497a8fc83d892c1f162b = new L.RegularPolygonMarker(
+                new L.LatLng(-23.0,48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a7f344bf8bb54a73af7f7ed188cc5d92 = new L.RegularPolygonMarker(
+                new L.LatLng(-7.0,38.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_77556e62e8c44b6687f7e04c2100b6db = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,36.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_fa505f23d6eb4879bde0c126e116f148 = new L.RegularPolygonMarker(
+                new L.LatLng(-17.0,146.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_eb3b883967684afa98fd7666ac3026ea = new L.RegularPolygonMarker(
+                new L.LatLng(17.0,-93.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_61da010a56474ded86f3af04b47ebc27 = new L.RegularPolygonMarker(
+                new L.LatLng(-1.0,26.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c48ebc8704a945a79ed9641005bf3a59 = new L.RegularPolygonMarker(
+                new L.LatLng(8.0,37.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_25d0b7d432dc458a8f55e2890398f345 = new L.RegularPolygonMarker(
+                new L.LatLng(8.0,36.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_999b02af1bc64bcfb02d03d1b71b80ed = new L.RegularPolygonMarker(
+                new L.LatLng(-23.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_5c604101f7a34cab94be52edef3875fc = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,145.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_6384cfa860ea44418b3b562ecc57354d = new L.RegularPolygonMarker(
+                new L.LatLng(-13.0,48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_829ed638fce54d4bab23710100194e68 = new L.RegularPolygonMarker(
+                new L.LatLng(-11.0,34.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_bdc2a47fa5c048bfa62baf45fe70730a = new L.RegularPolygonMarker(
+                new L.LatLng(22.0,121.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_26b9971e84c147799eeb9e772530939b = new L.RegularPolygonMarker(
+                new L.LatLng(1.0,-77.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_72ca18256aca413bbb8f5159f7b5e8f7 = new L.RegularPolygonMarker(
+                new L.LatLng(2.0,-77.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_49183a7814974482a2f190696f690f87 = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,2.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_507482d41f894e6aa927a085cc9ff165 = new L.RegularPolygonMarker(
+                new L.LatLng(-4.0,21.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_44770374208a43699d3e9e361335d796 = new L.RegularPolygonMarker(
+                new L.LatLng(-3.0,29.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_0882a8205ed24bd7aa077f8dab72ce2d = new L.RegularPolygonMarker(
+                new L.LatLng(19.0,-97.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d23f8282279f45e3a0c4d4955d944e4c = new L.RegularPolygonMarker(
+                new L.LatLng(-4.0,38.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_9ccc3c4bf330451a8a537b8859f8f9bf = new L.RegularPolygonMarker(
+                new L.LatLng(-8.0,37.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_333dc74249dc4a42b1e1c593b35d977d = new L.RegularPolygonMarker(
+                new L.LatLng(5.0,-74.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_44646397d8ba4049adf7405cecb13563 = new L.RegularPolygonMarker(
+                new L.LatLng(-2.0,40.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_39a5a83c00394cabb30caa1a3146bc2f = new L.RegularPolygonMarker(
+                new L.LatLng(-9.0,35.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ca3f1766830240d4bf7eeb5f479b2346 = new L.RegularPolygonMarker(
+                new L.LatLng(48.0,-123.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_18c16f635a5d4bbfb4d750e9093efd38 = new L.RegularPolygonMarker(
+                new L.LatLng(-25.0,47.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b600ad15d94e40928a17eeaaecc0f4f2 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,35.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_2759d1dbe37c41b1acb07f6d44b801d4 = new L.RegularPolygonMarker(
+                new L.LatLng(-17.0,50.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_dc52a22faf6b4d5688fcf7a0e2c04f7e = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,3.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_015bda21f43846a487441ae5a981ba02 = new L.RegularPolygonMarker(
+                new L.LatLng(2.0,23.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b33c883d68fb4114a4c43b35c7985ac7 = new L.RegularPolygonMarker(
+                new L.LatLng(-16.0,36.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d3a41261f35540a9b890ebcc4d881c84 = new L.RegularPolygonMarker(
+                new L.LatLng(-8.0,36.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_f34df2961dce42fdb0710ec2ed4c10be = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,5.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_307b034c4370433d9eb933cfec8add28 = new L.RegularPolygonMarker(
+                new L.LatLng(5.0,-9.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3a86254557fd438e94fb0d610e195bae = new L.RegularPolygonMarker(
+                new L.LatLng(-10.0,35.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b17bbd427f8b4e5ba818f78f13019273 = new L.RegularPolygonMarker(
+                new L.LatLng(1.0,25.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_123336af89da4854b3ebf39efd7363d0 = new L.RegularPolygonMarker(
+                new L.LatLng(13.0,-86.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_2f02ad0e28a2476f97acb3242005e638 = new L.RegularPolygonMarker(
+                new L.LatLng(-1.0,13.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_e204d08f93c64e86bbeb94f724a3e7e3 = new L.RegularPolygonMarker(
+                new L.LatLng(8.0,-8.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_70ea75d2d1344a8b80c53b6800c3d7e6 = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,-9.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a82f155307624be5bd15076d73c2650f = new L.RegularPolygonMarker(
+                new L.LatLng(18.0,-67.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_fc38c4c249ea4944b1f4dfb939e11f85 = new L.RegularPolygonMarker(
+                new L.LatLng(-17.0,49.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d97fb5060f6c49cab8b3ecca893b471c = new L.RegularPolygonMarker(
+                new L.LatLng(14.0,-87.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_74412b04ab414eaa8dec5ee488b1c2fc = new L.RegularPolygonMarker(
+                new L.LatLng(0.0,35.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_2b66c5745a9149ca8df5f6c85788f0a2 = new L.RegularPolygonMarker(
+                new L.LatLng(-23.0,-48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_780694cac4fe49bda59ee6554ae7f7e5 = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,35.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_161f80681c7a40d59a3030030fb96c18 = new L.RegularPolygonMarker(
+                new L.LatLng(6.0,-0.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_7f5d7950df7640888619a57e98bcdba2 = new L.RegularPolygonMarker(
+                new L.LatLng(23.0,121.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_9e6d818b60eb4b72855f4d9e618b3ed6 = new L.RegularPolygonMarker(
+                new L.LatLng(-21.0,55.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_0c1034c2ecb64c459670869925af205a = new L.RegularPolygonMarker(
+                new L.LatLng(-22.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b3b33d256341499db24fdf59ec0f58a4 = new L.RegularPolygonMarker(
+                new L.LatLng(-8.0,38.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_16a89a257dbd45d495a5a910e47cb44f = new L.RegularPolygonMarker(
+                new L.LatLng(-18.0,44.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_96e929dec9d04ac4a3b5695ade920775 = new L.RegularPolygonMarker(
+                new L.LatLng(2.0,16.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_93100652c2c74d5093eec0788d89b655 = new L.RegularPolygonMarker(
+                new L.LatLng(6.0,-87.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c395c66878aa45cc9b7e05c02951f150 = new L.RegularPolygonMarker(
+                new L.LatLng(-14.0,48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_501d4c9fab6d4298886c4e8845200b09 = new L.RegularPolygonMarker(
+                new L.LatLng(2.0,13.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_31933c5ac4f142119d863c03f23f1431 = new L.RegularPolygonMarker(
+                new L.LatLng(-21.0,-48.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_2f1fd67fe17d4fd79727d78b967f004f = new L.RegularPolygonMarker(
+                new L.LatLng(9.0,-11.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_6caa4907907c433fbfbedd47992e348a = new L.RegularPolygonMarker(
+                new L.LatLng(11.0,-84.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_cfb73aa141d64228ab5e23c993350261 = new L.RegularPolygonMarker(
+                new L.LatLng(10.0,-83.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_222d758bf7c0410289b65b04231e0536 = new L.RegularPolygonMarker(
+                new L.LatLng(-22.0,-50.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_f296a66ed25b49f69ad31044f777c77b = new L.RegularPolygonMarker(
+                new L.LatLng(-2.0,41.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_5712150896d74d0e93116d987e2c6efb = new L.RegularPolygonMarker(
+                new L.LatLng(-2.0,11.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_bc4db0a4db3d4528bbe43495ef6ce3e9 = new L.RegularPolygonMarker(
+                new L.LatLng(-23.0,45.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_eb024ab391d44ecfa155f9156528bb08 = new L.RegularPolygonMarker(
+                new L.LatLng(18.0,-66.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a2be916cb0ab4021967902add2f86dbd = new L.RegularPolygonMarker(
+                new L.LatLng(-0.0,25.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_abc705d98acf446c855fa355c212cdb8 = new L.RegularPolygonMarker(
+                new L.LatLng(6.0,-76.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b6738489f97a4e35ada58e91ff10057b = new L.RegularPolygonMarker(
+                new L.LatLng(-15.0,144.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_945f897f5b4a4a5eb3422a8ac3d71245 = new L.RegularPolygonMarker(
+                new L.LatLng(-10.0,39.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3f9d8c2963ad4853a3b8091906c225e5 = new L.RegularPolygonMarker(
+                new L.LatLng(-12.0,143.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3f3475c03b6146ab9aae284bdc7d731d = new L.RegularPolygonMarker(
+                new L.LatLng(-13.0,143.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_3c0ce9d505d04a4aa6efe469c4276778 = new L.RegularPolygonMarker(
+                new L.LatLng(5.0,-7.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a64a528f54dc44ab8c469848d61ea473 = new L.RegularPolygonMarker(
+                new L.LatLng(-12.0,18.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_95e918857b8542079cb46e91cbb33006 = new L.RegularPolygonMarker(
+                new L.LatLng(-17.0,145.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_93a5be4f4c124d55b8e7130684e9a649 = new L.RegularPolygonMarker(
+                new L.LatLng(4.0,26.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_a7679f13238b446dafdbc35c2a6fcf72 = new L.RegularPolygonMarker(
+                new L.LatLng(-0.0,-76.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b026f3b1dad8487dbf31d15f1f5e9226 = new L.RegularPolygonMarker(
+                new L.LatLng(-8.0,-36.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b47cc2d07269448aaa2744218a8fe3ba = new L.RegularPolygonMarker(
+                new L.LatLng(2.0,29.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ca947d760c844a29bfb53ef023c8125f = new L.RegularPolygonMarker(
+                new L.LatLng(25.0,99.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ae19117ad08e4d57b0e508295c037de0 = new L.RegularPolygonMarker(
+                new L.LatLng(13.0,-87.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_80c6c97552804c96a53cf7c14d7b97bb = new L.RegularPolygonMarker(
+                new L.LatLng(12.0,-86.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_4275607fa7bf4ad7b74a1a9979dc5cb7 = new L.RegularPolygonMarker(
+                new L.LatLng(1.0,10.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_0113df1b2640438f9de145a31a024f49 = new L.RegularPolygonMarker(
+                new L.LatLng(-15.0,-69.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_eba9b39f2825408aa27dc8864c3a0bd8 = new L.RegularPolygonMarker(
+                new L.LatLng(-18.0,34.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_b2a5481f7f1a463fbdab12d31a526f2b = new L.RegularPolygonMarker(
+                new L.LatLng(-1.0,40.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_d3af3a54a95145d6b786eb731a71d968 = new L.RegularPolygonMarker(
+                new L.LatLng(-20.0,49.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_acf56309dba645ab954f6884f4f24209 = new L.RegularPolygonMarker(
+                new L.LatLng(-3.0,18.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_db79a7e6dc0a4ff9b85f730365326366 = new L.RegularPolygonMarker(
+                new L.LatLng(-24.0,34.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c1507901f5fd4b57b83188d2ab730c0b = new L.RegularPolygonMarker(
+                new L.LatLng(2.0,31.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_ac57fe8c74624d0982d802055b5fbd11 = new L.RegularPolygonMarker(
+                new L.LatLng(-28.0,154.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_be816f41b5ab4b5d8f5e4840774319ae = new L.RegularPolygonMarker(
+                new L.LatLng(-28.0,153.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_c99f0a37e0474a89963c7e7d0318ab24 = new L.RegularPolygonMarker(
+                new L.LatLng(7.0,39.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#ffeda0',
+                    opacity: 0.4,
+                    weight: 2,
+                    fillColor: '#ffeda0',
+                    fillOpacity: 0.4,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_9397e44ec74a4f14a8644d900fb4f8e8 = new L.RegularPolygonMarker(
+                new L.LatLng(-23.0,-47.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#f03b20',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f03b20',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+            var regular_polygon_marker_899bbc438c44412694c669563c02530e = new L.RegularPolygonMarker(
+                new L.LatLng(5.0,-76.0),
+                {
+                    icon : new L.Icon.Default(),
+                    color: '#f03b20',
+                    opacity: 1,
+                    weight: 2,
+                    fillColor: '#f03b20',
+                    fillOpacity: 1,
+                    numberOfSides: 4,
+                    rotation: 45,
+                    radius: 5
+                    }
+                )
+                .addTo(map_44ada2967cd740d8bec0d7560c278611);
+            
+        
+            
+                var lat_lng_popup_412a3f232b6546c3bddc952ba7c59e33 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_412a3f232b6546c3bddc952ba7c59e33
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_44ada2967cd740d8bec0d7560c278611);
+                    }
+                map_44ada2967cd740d8bec0d7560c278611.on('click', latLngPop);
+            
+        
+        
+        </script>
+        
